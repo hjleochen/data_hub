@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @model.name %>
+</p>
+
+<p>
+  <strong>Tbl name:</strong>
+  <%= @model.tbl_name %>
+</p>
+
+<p>
+  <strong>Mdl name:</strong>
+  <%= @model.mdl_name %>
+</p>
+
+<p>
+  <strong>Id field:</strong>
+  <%= @model.pk_field %>
+</p>
+
+<p>
+  <strong>Display field:</strong>
+  <%= @model.display_field %>
+</p>
+
+<p>
+  <strong>Search keys:</strong>
+  <%= @model.search_keys %>
+</p>
+
+<p>
+  <strong>Output fields:</strong>
+  <%= @model.output_fields %>
+</p>
+
+<%= link_to 'Edit', edit_model_path(@model) %> |
+<%= link_to 'Back', models_path %>

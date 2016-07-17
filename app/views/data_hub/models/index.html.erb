@@ -1,0 +1,43 @@
+<% title "Models List" -%>
+<%= breadcrumbs [['Models', models_path]] -%>
+
+<p id="notice"><%= notice %></p>
+
+<table class="table table-bordered table-stripped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Table name</th>
+      <th>Model name</th>
+      <th>Pk field</th>
+      <th>Display field</th>
+      <th>Search keys</th>
+      <!--
+      <th>Output fields</th>
+      -->
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @models.each do |model| %>
+      <tr>
+        <td><%= model.name %></td>
+        <td><%= model.tbl_name %></td>
+        <td><%= model.mdl_name %></td>
+        <td><%= model.pk_field %></td>
+        <td><%= model.display_field %></td>
+        <td><%= model.search_keys %></td>
+        <!--
+        <td><%= model.output_fields %></td>
+        -->
+        <td><%= link_to 'Edit', edit_model_path(model) %></td>
+        <td><%= link_to 'Destroy', model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Model', new_model_path, class:'btn btn-success' %>

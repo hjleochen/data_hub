@@ -1,0 +1,54 @@
+<%= form_for(model) do |f| %>
+  <% if model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(model.errors.count, "error") %> prohibited this model from being saved:</h2>
+
+      <ul>
+      <% model.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :tbl_name %>
+    <%= f.text_field :tbl_name, class:'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :mdl_name %>
+    <%= f.text_field :mdl_name, class:'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :pk_field %>
+    <%= f.text_field :pk_field, class:'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :display_field %>
+    <%= f.text_field :display_field, class:'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :search_keys %>
+    <%= f.text_field :search_keys, class:'form-control'  %>
+		<p class="help-block">Ransack style search keys: title_cont_or_name_cont</p>
+  </div>
+
+  <!--
+  <div class="form-group">
+    <%= f.label :output_fields %>
+    <%= f.text_area :output_fields, class:'form-control'  %>
+  </div>
+  -->
+
+    <%= f.submit  class:'btn btn-success'%>
+    <%= link_to 'Back', models_path, class:'btn btn-default' %>
+<% end %>

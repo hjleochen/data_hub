@@ -1,0 +1,28 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Models
+  tbl_name: models
+  mdl_name: Model
+  pk_field: id
+  display_field: name
+  search_keys: name_cont
+  output_fields: id,name
+
+user:
+  name: Users
+  tbl_name: weixin.users
+  mdl_name: User
+  pk_field: id
+  display_field: login
+  search_keys: login_cont
+  output_fields: id,login
+
+account:
+  name: Account
+  tbl_name: weixin.accounts
+  mdl_name: Account
+  pk_field: id
+  display_field: account
+  search_keys: account_cont
+  output_fields: id,account

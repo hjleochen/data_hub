@@ -1,0 +1,7 @@
+<ol class="breadcrumb">
+  <li><%= link_to 'Home', root_path -%></li>
+  <% links.each do |link| -%>
+    <li><%= link_to link.first, link.last -%></li>
+  <% end -%>
+  <li class="active"><%= yield :title -%></li>
+</ol>
